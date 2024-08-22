@@ -6,7 +6,7 @@ global hotkeyBox := "#Space" ; Complete list of hotkeys, https://www.autohotkey.
 global currentBoxState := "closed"
 
 global marginX := 10
-global marginY := 15  
+global marginY := 15
 global windowColor := "000000"
 global controlColor := "000000"
 global fontSize := 26
@@ -27,9 +27,9 @@ destroyBox() {
 boxStyleAndOptions() {
   ; Box options
   ; For performance reasons, it is better to set all options in a single line
-  ; and to do so before creating the window 
+  ; and to do so before creating the window
   ; Caption: remove title bar and a thick window border/edge
-  ; SysMenu: omit the system menu and icon 
+  ; SysMenu: omit the system menu and icon
   ; Owner: hides taskbar icon
   Gui, +AlwaysOnTop -Caption -SysMenu +Owner
 
@@ -64,7 +64,7 @@ showCommandBox() {
 
   Gui, Add, Edit, w%editBoxWidth% r%editBoxNoOfRows% %fontColor% -E0x200 vcommandQuery gCommandEnter, %commandBoxPlaceholderText% ; Add "Edit" GUI
 
-  Gui, Show, Center ; Horizontally and vertically center the GUI 
+  Gui, Show, Center ; Horizontally and vertically center the GUI
 
   currentBoxState := "open" ; Update the state of box to "open"
 }
@@ -98,7 +98,7 @@ GuiEscape:
 ; Run command
 CommandEnter:
   Gui, Submit, NoHide ; NoHide param makes sure window stays open after first char input
-  
+
   handleCommand(commandQuery)
 
   return
@@ -106,7 +106,7 @@ CommandEnter:
 ; Run url
 SearchEnter:
   Gui, Submit
-  
+
   destroyBox()
 
   runSearchUrl(searchBoxUrl, searchQuery)
