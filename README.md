@@ -47,22 +47,16 @@ as of Aug 2024, `v1.1.37.02` is the latest AutoHotKey v1 version
 winget install --id=AutoHotkey.AutoHotkey -v "1.1.37.02" -e
 ```
 
+Then, download the zip and extract `ahk_launcher-main.zip`.
+
+To run the script on boot, create a shortcut for `app/launcher.ahk` and place it in `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup`.
+
+Run `launcher.ahk` and then use the hotkey **`Win + Space`** to use the launcher.
+
 ## 💡 Usage
-
-First, clone the repo
-
-```powershell
-git clone https://github.com/dpi0/ahk_launcher.git
-```
-
-Extract `ahk_launcher.zip` and move the extracted folder to a rather fixed location.
-
-To run the script on boot, create a shortcut of `launcher.ahk` in `C:\Users\<username>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`.
 
 - `launcher.ahk` handles the UI and functionality.
 - `user_commands.ahk` is for custom commands and search engines.
-
-After running `launcher.ahk` use the hotkey **`Win + Space`** to launch the app.
 
 `user_commands.ahk` is what users are expected to modify to their own needs. It contains simple switch case statements where users can add any number of commands and search engines.
 
