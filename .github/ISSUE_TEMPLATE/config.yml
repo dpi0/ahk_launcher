@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions
+    url: https://google.com
+    about: You can join the discussions on Discord.
+  - name: Login does not work
+    url: https://github.com/dpi0/ahk_launcher/blob/main/CONTRIBUTING.md
+    about: Before opening a new issue, please make sure to read CONTRIBUTING.md
